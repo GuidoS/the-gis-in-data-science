@@ -120,7 +120,7 @@
 			<section id="gis-users-are-data-scientists" data-background="http://i.giphy.com/90F8aUepslB84.gif">
 				<aside class="notes">What, we are data scientists?</aside>
 			</section>
-			<section id="demo-tools">
+			<section id="demo">
 				<h1><a href="https://cartoframes.readthedocs.io/en/latest/">CartoFrames</a></h1>
 				<h1><a href="https://mybinder.org/v2/gh/CartoDB/cartoframes/master?filepath=examples">Let's go</a></h1>
 				<aside class="notes">
@@ -133,7 +133,22 @@
 					<br />CartoFrame
 				</aside>
 			</section>
+			<section>
+				<h1>add some charts</h1>
+				<pre>
+<code>import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+ts = pd.Series(np.random.randn(1000), index=pd.date_range('1/1/2000', periods=1000))
+ts = ts.cumsum()
+ts.plot()
+</code></pre>
+			</section>
+			<section><h1>profile data</h1>
+			<pre><code>df.agg(['sum','min','max','count'])</code></pre></section>
+			<!--end slides-->
 		</div>
+		<!--end reveal-->
 	</div>
 
 	<script src="lib/js/head.min.js"></script>
