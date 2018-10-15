@@ -133,19 +133,21 @@
 					<br />CartoFrame
 				</aside>
 			</section>
-			<section>
+			<section id="profile">
+				<h1>profile data</h1>
+				<pre><code>df.agg(['sum','min','max','count'])</code></pre>
+			</section>
+			<section id="charts">
 				<h1>add some charts</h1>
-				<pre>
-<code>import matplotlib.pyplot as plt
+				<pre><code>import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 ts = pd.Series(np.random.randn(1000), index=pd.date_range('1/1/2000', periods=1000))
 ts = ts.cumsum()
 ts.plot()
-</code></pre>
+			</code>
+			</pre>
 			</section>
-			<section><h1>profile data</h1>
-			<pre><code>df.agg(['sum','min','max','count'])</code></pre></section>
 			<!--end slides-->
 		</div>
 		<!--end reveal-->
@@ -162,7 +164,8 @@ ts.plot()
 		Reveal.configure({
 			// Transition style
 			transition: 'zoom', // none/fade/slide/convex/concave/zoom
-			fragmentInURL: true
+			fragmentInURL: true,
+			pdfMaxPagesPerSlide: 1
 		});
 
 		Reveal.initialize({
