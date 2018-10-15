@@ -8,7 +8,7 @@
 	<title>The GIS in Data Science</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/black.css">
+	<link rel="stylesheet" href="css/theme/sky.css">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -26,11 +26,92 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section>
+			<section id="title">
 				<h1>The GIS in Data Science</h1>
-				<p>Guido Stein</p>
+				<p>Guido Stein<br />
+					Geospatial Data Alchemist<br />
+					Applied Geographics, Inc.</p>
 			</section>
-			<section>Slide 2</section>
+			<section id="welcome">
+				Hi there
+				<aside class="notes"> </aside>
+			</section>
+			<section id="overview">
+				Data Science
+				<br />Tools
+				<br />Resources
+				<aside class="notes"> </aside>
+			</section>
+			<section id="science" data-background="image/science.jpg">
+				<aside class="notes">
+					<br />https://goo.gl/sh7r4J
+
+				</aside>
+			</section>
+
+			<section id="data-science" data-background="image/data-science.jpg">
+				<aside class="notes">
+					"The extraction of knowlegde from data" - Dmitry Zinoview. "Data Science Essentials in Python"
+					<br />A combination of
+					<br />- Computer Science
+					<br />- Statistics (regression, inference)
+					<br />- Domain Knowledge (questions, result interpretation)
+					<br />https://goo.gl/JZek9F
+				</aside>
+			</section>
+			<section id="computer-science" data-background="image/computer-science.jpg">
+				<aside class="notes">
+					- Data structures
+					<br />- point, line polygon
+					<br />- units of measure
+					<br />- coordinate systems
+					<br />https://goo.gl/JxNpWN
+				</aside>
+			</section>
+			<section id="statistics">
+				<img src="image/statistics.png" />
+				<aside class="notes"> </aside>
+			</section>
+			<section id="domain-knowledge" data-background="image/domain-knowledge.jpg">
+				<aside class="notes"> <br />https://goo.gl/MiRosc</aside>
+			</section>
+			<section id="so">
+				<table>
+					<thead>
+						<tr>
+							<th>Data Scientist</th>
+							<th>GIS Professional</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="fragment fade-in" data-fragment-index="1">
+							<td>Data Collection</td>
+							<td>Data Collection</td>
+						</tr>
+						<tr class="fragment fade-in" data-fragment-index="2">
+							<td>Data Organization</td>
+							<td>Data Organization</td>
+						</tr>
+						<tr class="fragment fade-in" data-fragment-index="3">
+							<td>Data Exploration</td>
+							<td>Data Exploration</td>
+						</tr>
+						<tr class="fragment fade-in" data-fragment-index="4">
+							<td>Data Analysis</td>
+							<td>Data Analysis</td>
+						</tr>
+					</tbody>
+				</table>
+				<aside class="notes"> </aside>
+			</section>
+			<section id="gis-users-are-data-scientists" data-background="http://i.giphy.com/90F8aUepslB84.gif">
+				<aside class="notes"> </aside>
+			</section>
+			<section id="demo-tools">
+				<h1><a href="https://cartoframes.readthedocs.io/en/latest/">CartoFrames</a></h1>
+				<h1><a href="https://mybinder.org/v2/gh/CartoDB/cartoframes/master?filepath=examples">Let's go</a></h1>
+				<aside class="notes"> </aside>
+			</section>
 		</div>
 	</div>
 
@@ -41,6 +122,13 @@
 		// More info about config & dependencies:
 		// - https://github.com/hakimel/reveal.js#configuration
 		// - https://github.com/hakimel/reveal.js#dependencies
+
+		Reveal.configure({
+			// Transition style
+			transition: 'zoom', // none/fade/slide/convex/concave/zoom
+			fragmentInURL: true
+		});
+
 		Reveal.initialize({
 			dependencies: [
 				{ src: 'plugin/markdown/marked.js' },
